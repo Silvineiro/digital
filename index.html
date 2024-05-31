@@ -56,3 +56,224 @@
    
   </body>
 </html>
+
+body {
+  background: #74b5ab;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  color: white;
+  }
+  
+h1 a {
+  text-decoration: none;
+  color: #b4dcb4;
+  }
+  
+img {
+  max-width: 100%;
+  }
+  
+.wrapper { /*everything goes inside this*/
+  width: 69em;
+  margin: auto;
+  }
+  
+.comic-box, .header, .comment-box, .page-navigation {
+  background: #0c1d24;
+  padding: 1em;
+  border-radius: 5px;
+  }
+  
+.header, .comment-box {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  }
+
+.comic-box, .sidebar-wrapper {
+  display: inline-block;
+  }
+  
+.sidebar-wrapper { /*sidebar goes inside this*/
+  width: 18em;
+  border:0px solid #000;
+  position: absolute;
+  margin-left: 1em;
+  }
+  
+.sidebar, .sidebar-2 {
+  background: #223f50;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  }
+  
+.header h1, .sidebar-wrapper h2 {
+  text-align:center;
+  }
+  
+.sidebar-2 {
+  margin-top: 0.9em;
+  }
+  
+.header {
+  width: 40em;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  margin-left: 5em;
+  font-size: 20px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  }
+  
+.comic-box { /*this is where the page of the comic goes*/
+  width: 48.5em;
+  }
+  
+/*Prevent image overflow*/
+.comic-box img, .comment-box img, .header img, .sidebar-wrapper img {
+  max-width: 100%;
+  height: auto;
+  }
+  
+.comment-box, .page-navigation {
+  width: 48.5em;
+  }
+  
+.comment-box { /*commentary box below the comic page + nav*/
+  }
+  
+.page-navigation { /*this is where the page nav buttons go*/
+  margin-top: 1em;
+  background: #223f50;
+  }
+  
+.button, .nav-button {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+  background: #4d7c80;
+  font-weight: bold;
+  color: white;
+  font-size: 1.3em;
+  border-radius: 5px;
+  text-decoration: underline;
+  }
+  
+.button { /*sidebar buttons*/
+  
+  }
+  
+.nav-button { /*comic page navigation buttons*/
+  display: inline-block;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  }
+  
+.button a, .nav-button a, a {
+  color: #b4dcb4;
+  }
+  
+a:hover {
+  color: white;
+  }
+  
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 1em;
+  color: black;
+  }
+  
+center {
+  text-align: center;
+  }
+  
+  
+@media(max-width: 1200px) {
+  .wrapper {
+    width: 85%;
+    }
+    
+  .sidebar-wrapper {
+    width: 21%;
+    }
+    
+  .comic-box, .comment-box, .page-navigation {
+    width: 70%;
+    }
+    
+  .header {
+    width: 75%;
+    }
+  }
+  
+@media(orientation: portrait) { /*mobile*/
+  .wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  border: 0px solid black;
+  top: 0;
+  left: 0;
+  right: 0;
+    }
+
+  .header, .sidebar-wrapper, .comic-box, .comment-box, .page-navigation {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 0px solid red;
+    }
+    
+  .header {
+    width: 80%;
+    }
+  
+  .sidebar-wrapper, .comic-box {
+    position: static;
+    display: block;
+    }
+    
+  .sidebar, .sidebar-2 {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    /*the width is broken on mobile and i can't figure out why
+    it's just slightly narrower than everything else and i don't understand
+    */
+    }
+    
+  .sidebar-wrapper img { /*to keep the widget icons from getting huge*/
+    max-height: 5em;
+    width: auto;
+    }
+    
+  .sidebar img {
+    max-height: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    }
+    
+  .sidebar p {
+    text-align: left;
+    }
+    
+  .sidebar h2 { /*hides the sidebar label in mobile theme*/
+    font-size: 0;
+    padding: 0;
+    margin-bottom: 2%;
+    }
+    
+  .button {
+    display: inline-block;
+    width: 5.25em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    }
+  }
